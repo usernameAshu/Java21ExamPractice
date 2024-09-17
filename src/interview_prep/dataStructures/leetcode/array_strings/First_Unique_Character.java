@@ -1,4 +1,4 @@
-package interview_prep.dataStructures.leetcode.array;
+package interview_prep.dataStructures.leetcode.array_strings;
 
 import java.util.LinkedList;
 

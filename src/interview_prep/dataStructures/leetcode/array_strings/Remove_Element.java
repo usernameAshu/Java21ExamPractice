@@ -1,4 +1,4 @@
-package interview_prep.dataStructures.leetcode.array;
+package interview_prep.dataStructures.leetcode.array_strings;
 
 public class Remove_Element {
 

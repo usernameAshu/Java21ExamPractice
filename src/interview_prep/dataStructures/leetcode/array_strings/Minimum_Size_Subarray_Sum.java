@@ -1,6 +1,4 @@
-package interview_prep.dataStructures.leetcode.array;
-
-import java.util.Arrays;
+package interview_prep.dataStructures.leetcode.array_strings;
 
 /**
  * LC 209
