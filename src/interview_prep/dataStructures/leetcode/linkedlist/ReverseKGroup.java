@@ -36,42 +36,50 @@ public class ReverseKGroup {
         return len;
     }
 
-
     public ListNode reverseKGroup(ListNode head, int k) {
+        //calculate number of nodes
         int N = len(head);
-        ListNode prevHead = null;
-        ListNode currHead = head;
-        ListNode ansNode = null;
         int groups = N/k;
 
-        for(int i = 0; i< groups; i++) {
-            ListNode prev = null;
+        ListNode prevHead = null;
+        ListNode ansHead = null;
+        ListNode currHead = head;
+
+        //iterate over each group
+        for(int i=0; i<groups;i++) {
+            ListNode prev =null;
             ListNode curr = currHead;
             ListNode next = null;
 
-            for(int j=0; j<k;j++) {
-                //reverse logic
+            for(int j=0;j<k;j++) {
+                //reverse the group
                 next = curr.next;
                 curr.next = prev;
                 prev = curr;
                 curr = next;
             }
 
+            //link the prev head of previous group with prev of next group to make a continues chain
+            //also take care of edge case - first time, no prev head will be there
             if(prevHead == null) {
-                ansNode = prev;
+                ansHead = prev;
             } else {
                 prevHead.next = prev;
             }
 
+            //prevHead to be shifted to current head
+            //and we need to shift currHead to the next current group/node
             prevHead = currHead;
             currHead = curr;
         }
 
-        //link the last incomplete group
-        // ,if last group was complete
-        //currHead would be null
+        //after the selected groups have been reversed,
+        //we need to link the remaining nodes, with previous head
+        //curr head will be at the new node.
+        //In case there is no node after reversing the groups, curr head will be at NULL
         prevHead.next = currHead;
 
-        return ansNode;
+        //this was stored when the 1st group was reversed
+        return ansHead;
     }
 }
