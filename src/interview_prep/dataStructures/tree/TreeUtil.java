@@ -14,4 +14,19 @@ public class TreeUtil {
 
         return root;
     }
+
+    public static interview_prep.dataStructures.leetcode.tree.TreeNode createBinaryTree() {
+        interview_prep.dataStructures.leetcode.tree.TreeNode root = new interview_prep.dataStructures.leetcode.tree.TreeNode(20);
+        root.left = new interview_prep.dataStructures.leetcode.tree.TreeNode(5);
+        root.right = new interview_prep.dataStructures.leetcode.tree.TreeNode(7);
+        root.left.left = new interview_prep.dataStructures.leetcode.tree.TreeNode(9);
+        root.left.right = new interview_prep.dataStructures.leetcode.tree.TreeNode(8);
+        root.left.right.left = new interview_prep.dataStructures.leetcode.tree.TreeNode(15);
+
+        root.right.right = new interview_prep.dataStructures.leetcode.tree.TreeNode(10);
+
+        return root;
+    }
+
+
 }
