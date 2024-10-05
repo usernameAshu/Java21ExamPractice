@@ -3,6 +3,9 @@ package interview_prep.dataStructures.leetcode.array_strings;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LeetCode 169
+ */
 public class Majority_Element {
 
     public static void main(String[] args) {
