@@ -1,11 +1,16 @@
 package designPatterns.creational;
 
 public class FactoryDesign {
+
+    /* driver */
     public static void main(String[] args) {
         VehicleFactory carFactory = new CarFactory();
         VehicleFactory truckFactory = new TruckFactory();
-        Vehicle car = carFactory.createVehicle();
-        Vehicle truck = truckFactory.createVehicle();
+
+        Client client = new Client(carFactory);
+        Vehicle car = client.getVehicle();
+        client = new Client(truckFactory);
+        Vehicle truck = client.getVehicle();
 
         System.out.println(car.getType());
         System.out.println(truck.getType());
@@ -18,6 +23,16 @@ where we need to produce different types of vehicle like Car, Truck, Ships
 So, we need a factory to produce this different types of vehicles
 It takes care of Single Responsibility Principal and Open-Closed Principal from SOLID
  */
+class Client {
+    private Vehicle vehicle;
+    public Client(VehicleFactory factory){
+        this.vehicle = factory.createVehicle();
+    }
+
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+}
 
 /* Factory interface and concrete factories */
 abstract class VehicleFactory {

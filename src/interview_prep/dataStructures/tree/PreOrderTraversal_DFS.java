@@ -1,6 +1,6 @@
 package interview_prep.dataStructures.tree;
 
-import interview_prep.dataStructures.leetcode.tree.TreeNode;
+import interview_prep.leetcode.tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

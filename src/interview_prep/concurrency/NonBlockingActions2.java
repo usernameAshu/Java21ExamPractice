@@ -1,6 +1,6 @@
 package interview_prep.concurrency;
 
-import interview_prep.dataStructures.leetcode.twoPointers.ThreeSum;
+import interview_prep.leetcode.twoPointers.ThreeSum;
 
 import java.util.ArrayList;
 import java.util.Iterator;
