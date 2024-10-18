@@ -2,15 +2,15 @@ package interview_prep.dataStructures.tree;
 
 public class TreeUtil {
 
-    public static TreeNode<Integer> createIntBinaryTree() {
-        TreeNode<Integer> root = new TreeNode<>(20);
-        root.left = new TreeNode<>(5);
-        root.right = new TreeNode<>(7);
-        root.left.left = new TreeNode<>(9);
-        root.left.right = new TreeNode<>(8);
-        root.left.right.left = new TreeNode<>(15);
+    public static Tree_Node<Integer> createIntBinaryTree() {
+        Tree_Node<Integer> root = new Tree_Node<>(20);
+        root.left = new Tree_Node<>(5);
+        root.right = new Tree_Node<>(7);
+        root.left.left = new Tree_Node<>(9);
+        root.left.right = new Tree_Node<>(8);
+        root.left.right.left = new Tree_Node<>(15);
 
-        root.right.right = new TreeNode<>(10);
+        root.right.right = new Tree_Node<>(10);
 
         return root;
     }

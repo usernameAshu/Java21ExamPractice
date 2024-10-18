@@ -8,19 +8,19 @@ import java.util.Queue;
 public class BFS_BinaryTree {
 
     public static void main(String[] args) {
-        TreeNode<Integer> root = TreeUtil.createIntBinaryTree();
+        Tree_Node<Integer> root = TreeUtil.createIntBinaryTree();
         List<Integer> res = new BFS_BinaryTree().BFS(root);
 
         System.out.println(res);
     }
 
-    public List<Integer> BFS(TreeNode<Integer> root) {
+    public List<Integer> BFS(Tree_Node<Integer> root) {
         List<Integer> res = new ArrayList<>();
-        Queue<TreeNode<Integer>> queue = new LinkedList<>();
+        Queue<Tree_Node<Integer>> queue = new LinkedList<>();
         queue.offer(root);
 
         while (!queue.isEmpty()) {
-            TreeNode<Integer> node = queue.poll();
+            Tree_Node<Integer> node = queue.poll();
             res.add(node.data);
 
             if (node.left != null) {
