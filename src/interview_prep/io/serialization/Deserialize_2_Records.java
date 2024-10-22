@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 
 /* Turn on all the checks in Statue records and deserialize */
-public class Deserialize_2 {
+public class Deserialize_2_Records {
     public static void main(String[] args) {
 
         //reading the sanitized data

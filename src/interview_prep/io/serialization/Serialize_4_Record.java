@@ -7,12 +7,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-/* Serializing the records properly */
-public class Serialize_3 {
+/* Serializing the records maliciously by turning off validation in record class*/
+public class Serialize_4_Record {
     public static void main(String[] args) {
-        var statue = new Statue("Liberty", 150, new Location("NY", "US"));
+        var statue = new Statue("Liberty", -1, new Location("NY", "US"));
 
-        try(var out = new ObjectOutputStream(new FileOutputStream("serial.data"));) {
+        try(var out = new ObjectOutputStream(new FileOutputStream("virus.data"));) {
             out.writeObject(statue);
 
         } catch (IOException e) {

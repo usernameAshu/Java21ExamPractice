@@ -1,4 +1,4 @@
-package interview_prep.serialize;
+package interview_prep.io.serialization;
 
 import java.io.*;
 import java.nio.file.Files;
