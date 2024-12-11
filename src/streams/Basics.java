@@ -20,7 +20,7 @@ public class Basics {
 
         people.stream()
                 .filter(person -> person.getAge() > 25)
-                .forEach(p -> p.name = "Test");
+                .forEach(p -> p.name = "Test_Epam");
 
         people.forEach(System.out::println);
 

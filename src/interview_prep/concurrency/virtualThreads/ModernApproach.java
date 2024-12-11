@@ -1,4 +1,4 @@
-package interview_prep.virtualThreads;
+package interview_prep.concurrency.virtualThreads;
 
 public class ModernApproach {
     public static void main(String[] args) {

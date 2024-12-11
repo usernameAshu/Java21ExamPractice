@@ -15,12 +15,12 @@ public class MergeSort {
         return nums;
     }
 
-    void mergeSort(int[] nums, int l, int r) {
-        if (l < r) {
-            int mid = l + (r - l) / 2;
+    void mergeSort(int[] nums, int l, int h) {
+        if (l < h) {
+            int mid = (l + h) / 2;
             mergeSort(nums, l, mid);
-            mergeSort(nums, mid + 1, r);
-            merge(nums, l, mid, r);
+            mergeSort(nums, mid + 1, h);
+            merge(nums, l, mid, h);
         }
 
     }
@@ -31,6 +31,7 @@ public class MergeSort {
         int[] left = new int[size1];
         int[] right = new int[size2];
 
+        //load the data into left and right arrays
         for (int i = 0; i < size1; i++)
             left[i] = nums[i + l];
         for (int i = 0; i < size2; i++)
@@ -59,53 +60,6 @@ public class MergeSort {
             nums[i] = right[k];
             k++;
             i++;
-        }
-    }
-
-    static void merge2(int[] array, int left, int mid, int right) {
-        int n = mid - left + 1;
-        int m = right - mid;
-
-        int[] L = new int[n];
-        int[] R = new int[m];
-
-
-        for (int i = 0; i < n; i++) {
-            L[i] = array[left + i];
-        }
-
-        for (int j = 0; j < m; j++) {
-            R[j] = array[mid + 1 + j];
-        }
-
-        // Maintain current index of sub-arrays and main array
-        int i = 0;
-        int j = 0;
-        int k = left;
-
-
-        while (i < n && j < m) {
-            if (L[i] <= R[j]) {
-                array[k] = L[i];
-                i++;
-            } else {
-                array[k] = R[j];
-                j++;
-            }
-
-            k++;
-        }
-
-        while (i < n) {
-            array[k] = L[i];
-            i++;
-            k++;
-        }
-
-        while (j < m) {
-            array[k] = R[j];
-            j++;
-            k++;
         }
     }
 

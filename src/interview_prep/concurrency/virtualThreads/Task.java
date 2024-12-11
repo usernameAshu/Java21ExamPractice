@@ -1,4 +1,4 @@
-package interview_prep.virtualThreads;
+package interview_prep.concurrency.virtualThreads;
 
 import java.io.IOException;
 import java.nio.file.Files;
