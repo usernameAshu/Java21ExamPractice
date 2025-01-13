@@ -1,7 +1,7 @@
 package enthuware.practice_test;
 
 public class StringExpression {
-    public static void main(String[] args) {
+    void main(String[] args) {
         String s = """     
                 hello     
                 world     
