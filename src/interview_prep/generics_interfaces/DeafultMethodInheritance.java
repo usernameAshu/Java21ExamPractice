@@ -57,6 +57,7 @@ interface a1 { public default void b() {
 interface a2 {public default void b() {
     System.out.println("a2.b");
 }}
+
 class Y implements a1, a2 {
 
     @Override

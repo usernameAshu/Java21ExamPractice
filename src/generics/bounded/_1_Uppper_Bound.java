@@ -1,6 +1,7 @@
 package generics.bounded;
 
 import java.util.Comparator;
+import java.util.List;
 
 public class _1_Uppper_Bound {
   void main() {
@@ -94,3 +95,4 @@ class MyCustomer extends Number implements Comparable<Double>,Runnable {
 /**
  * There is no Lower bounded generic type parameter
  */
+//class Invalid<E super Number> {} //invalid case

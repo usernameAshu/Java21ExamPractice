@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ImmutableClass {
-    void test() {
+    static void test() {
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
@@ -17,8 +17,8 @@ public class ImmutableClass {
         System.out.println(foo.getList());
     }
 
-    public static void main(String[] args) {
-        new ImmutableClass().test();
+    void main(String[] args) {
+        test();
     }
 
 

@@ -21,7 +21,7 @@ class DataHolder<T> {
 /*
 processData(DataHolder<String>)' clashes with 'processData(DataHolder<Integer>)';
 both methods have same erasure
-Due to Type erasure, compiler won't allow allow 2 same methods to have different type-parameter,
+Due to Type erasure, compiler won't allow 2 same methods to have different type-parameter,
 since to compiler eyes, after removing the Type both method have same signature.
  */
 class TestClass {
