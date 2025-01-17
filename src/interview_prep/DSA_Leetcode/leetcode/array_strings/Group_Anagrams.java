@@ -23,9 +23,9 @@ import java.util.*;
  */
 public class Group_Anagrams {
 
-    public static void main(String[] args) {
+    void main(String[] args) {
 
-        List<List<String>> result = new Group_Anagrams().groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
+        List<List<String>> result = groupAnagrams(new String[]{"zoo","ozo", "eat", "tea", "tan", "ate", "nat", "bat"});
 
         System.out.println(result);
 
@@ -43,7 +43,7 @@ public class Group_Anagrams {
      * @param strs
      * @return
      */
-    public List<List<String>> groupAnagrams(String[] strs) {
+    public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> freqMap = new HashMap<>();
 
         for (String str : strs) {
@@ -68,7 +68,7 @@ public class Group_Anagrams {
         return result;
     }
 
-    private String generateFrequencyString(String str) {
+    private static String generateFrequencyString(String str) {
         int[] freq = new int[26];
         char[] ch = str.toCharArray();
         int i = 0;

@@ -70,10 +70,10 @@ public class SortList {
             head2 = head2.next;
         }
 
-        ListNode t = ansHead;
-        ansHead = ansHead.next;
-        t = null;
-        return ansHead;
+//        ListNode t = ansHead;
+//        ansHead = ansHead.next;
+//        t = null;
+        return ansHead.next;
     }
 
     private static void printHead(ListNode head1) {

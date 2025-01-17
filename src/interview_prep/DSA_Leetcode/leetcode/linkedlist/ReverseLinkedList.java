@@ -8,7 +8,7 @@ package interview_prep.DSA_Leetcode.leetcode.linkedlist;
  */
 public class ReverseLinkedList {
 
-    public static void main(String[] args) {
+    void main(String[] args) {
 
         ListNode head = LLUtil.createList();
         LLUtil.printHead(head);

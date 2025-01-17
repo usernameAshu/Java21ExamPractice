@@ -1,9 +1,14 @@
 package generics.variance;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class _3_Example {
   void main() {
     //List<Fruit> fruits = new ArrayList<Apple>(); //invariant
     //List<Apple> apples = new ArrayList<Fruit>(); //invariant
+
+    List<? extends Number> nums = new ArrayList<Integer>(); //covariant for bounded wildcard
 
   }
 
