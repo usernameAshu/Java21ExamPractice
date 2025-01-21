@@ -25,6 +25,7 @@ public class Averager {
   }
 
   static double averageN(List<Number> list) {
+    List<? extends Number> nums ; //Only wildcard is allowed as type parameter to declare variables  
     double sum = 0.0;
     for(Number n: list) {
       sum += n.doubleValue();
