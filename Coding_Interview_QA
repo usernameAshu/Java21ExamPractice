@@ -37,4 +37,59 @@ If you have multiple employees with the same designation,
 then find the employee with the highest salary.
 i/p: [{1000, 5}, {1500, 3}, {2000, 5}, {2500, 3}, {3000, 5}] => o/p: {2500, 3}
 
+//IBS
+Coding round:
+1. Find the max sub array product, return the product value
+i/p: [2, 3, -2, 4] => o/p: 6
+2. Given two strings (s & t), return the first index where the string 's' has an anagram with 't'.
+Example: s = "cbaebabacd", t = "abc" => o/p: 0
+Tech round 1:
+1. Given an array of letters, which contains alphabets and asterisk(*). We need to create an array
+with only the alphabets in the same order.
+Example: ['a', 'b', '*', 'c', 'd', '*'] => ['a', 'b', 'c', 'd']
+2. Given a list of houses with their networth in integers, there is a thief who can rob the houses
+but he cannot rob two adjacent houses. Find the maximum networth he can rob.
+Example: [2, 7, 9, 3, 1] => 12
+3. Explain the project and the role in the project.
+4. Database questions:
+a. What is the difference between SQL and NoSQL?
+b. What is database sharding and how it is implemented?
+c. What is database partioning and how it is implemented?
+5. How to make application scalable?
+6. What happens when HashMap is full and how to handle it?
+Answer: When the HashMap is full, the load factor is increased and the size of the HashMap is doubled.
+7. How it affects the key-value pair in the HashMap?
+Answer: The key-value pair is stored in the bucket of the HashMap. When the HashMap is full,
+the bucket is increased and the key-value pair is stored in the new bucket.
+8. What is key rehashing?
+Answer: When the HashMap is full, the key rehashing is done to store the key-value pair in the new bucket.
+
+Tech Round 2:
+1. What are primary index and secondary index ?
+2. In database shards how to handle query where range falls between 2 shards ?
+3. There is an email field in database, one million records. We need to query based on email,
+how to optimise the search , without using normal equals search ?
+4. What is the difference between Component and Service annotation ?
+5. How can we configure multiple datasources in spring boot application ?
+6. Algorithm question:
+Given a list of integers, find the maximum number on immediate right side of the current element.
+Example: [2, 3, 1, 4, 5] => [3, 4, 4, 5, -1]
+
+//Bharat Connect (NPCI)
+Round 1:
+Coding questions: 
+Algorithm question:
+1. Given 2 strings, and a cost integer. 
+We need to replace the letter of 1st string with the 2nd string letter by letter, where the absolute difference between the 2 letters is less than the cost.
+Find out the maximum substring with such replacement.
+2. 
+Spring boot API design:
+1. Given an application, fix the existing bugs and add rest endpoints and test with Junit test case.
+2. Given an existing app, fix the bugs and execute the test cases.
+SQL query to print the names whose firstName & lastName is more than 12 letters
+
+Round 2: Tech round
+1. Sort employee list based on salary
+2. From tables of customers and orders , print the customer_name and customer_id for shopping over 500.
+
 
