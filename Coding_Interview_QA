@@ -92,4 +92,35 @@ Round 2: Tech round
 1. Sort employee list based on salary
 2. From tables of customers and orders , print the customer_name and customer_id for shopping over 500.
 
+//Shell Recharge
+Round 1: Coding round (HackerRank)
+1. Given a integer array jumps, where each jumps says you have to go up or down.
+Return the minimum starting stair, so that at any jump you don't go below 1.
+Example: jumps array: [1, ,-2, -4, 3] => o/p: 6 (starting stair)
+Demo:
+starting stair    Jump
+6                  1
+7                  -2
+5                  -4
+1                  3
+4
+So, it means you have to start from 6th stair, so that you don't go below 1.
+
+2. Rest API question, call a GET api using java HttpClient and fetch the calling code from the response.
+API: https://jsonmock.hackerrank.com/api/countries?name={country_name}
+Example: https://jsonmock.hackerrank.com/api/countries?name=India
+Take care for countries with 2 words like 'United States'
+You need to join with "%20" for such countries.
+example: https://jsonmock.hackerrank.com/api/countries?name=United%20States
+
+3. MCQ questions regarding Java and SQL
+
+4. SQL query question:
+Given 2 tables, Customers and Orders
+Customers: customer_id, customer_name
+Orders: order_id, customer_id, min_order_value, max_order_value, is_active
+Print a report containing active customers ordered by customer_name. (below format)
+customer_id, customer_name, min_order_value, max_order_value, total_ord_value
+
+
 
