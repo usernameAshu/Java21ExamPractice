@@ -76,7 +76,7 @@ Given a list of integers, find the maximum number on immediate right side of the
 Example: [2, 3, 1, 4, 5] => [3, 4, 4, 5, -1]
 
 //Bharat Connect (NPCI)
-Round 1:
+Round 1: (Coding round, HackerRank)
 Coding questions: 
 Algorithm question:
 1. Given 2 strings, and a cost integer. 
@@ -92,11 +92,20 @@ Round 2: Tech round
 1. Sort employee list based on salary
 2. From tables of customers and orders , print the customer_name and customer_id for shopping over 500.
 
+Round 3: Manager Round
+1. How to architect a distributed messaging queue system ?
+2. How to handle events which are getting failed ?
+3. How to fix an application which is getting exhausted (thread-pools) by the incoming requests from topic ? (Thread-timeout)
+4. In a pub-sub model, lets say if there is a huge thread-contention, how to handle that? (Thread-coordinator)
+5. In applications, queries are taking huge time to finish, what can we do ? (Database partition & sharding)
+6. If we need to create an index for a small dataset, and since BTree index will be a overkill, which index is preferred ?
+
+
 //Shell Recharge
 Round 1: Coding round (HackerRank)
 1. Given a integer array jumps, where each jumps says you have to go up or down.
 Return the minimum starting stair, so that at any jump you don't go below 1.
-Example: jumps array: [1, ,-2, -4, 3] => o/p: 6 (starting stair)
+Example: jumps array: [1,-2, -4, 3] => o/p: 6 (starting stair)
 Demo:
 starting stair    Jump
 6                  1
@@ -114,6 +123,11 @@ You need to join with "%20" for such countries.
 example: https://jsonmock.hackerrank.com/api/countries?name=United%20States
 
 3. MCQ questions regarding Java and SQL
+Priority Queue
+Try-catch-finally
+SQL query syntax 
+Calling non-static method from static method.
+
 
 4. SQL query question:
 Given 2 tables, Customers and Orders
