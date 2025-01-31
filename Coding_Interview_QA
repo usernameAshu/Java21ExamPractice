@@ -137,4 +137,17 @@ Print a report containing active customers ordered by customer_name. (below form
 customer_id, customer_name, min_order_value, max_order_value, total_ord_value
 
 
+//World Pay
+Round 1: Technical Discussion
+Introduce yourself and project 
+Some questions around Kafka:
+1. How to configure Kafka for an event driven system
+2. What are the types of Compatibility of Schema in registry (backward, forward, transitive)
+3. How to protect consumers from consuming poison pill from Kafka queue ?
+4. How can we control throughput of a micro-service architecture ? (Using API gateway - AWS Rate-limiter)
+5. How can we optimise database ? (Partioning and Sharding)
+6. What to do handle situation when a micro service fails to respond ? 
+	-Circuit breaker pattern
+	-Fallback strategy 
+	-Retry and push to DLQ strategy
 
