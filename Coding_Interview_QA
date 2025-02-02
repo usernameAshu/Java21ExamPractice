@@ -5,7 +5,7 @@ i/p: [1,2,5,3,5,2,1] => o/p: [1,2,5,3]
 2. Given a map of Name and Salary, Group employees based on salary.
 i/p: {John: 1000, Jane: 1500, Doe: 1000, Smith: 2000} => o/p: {1000: [John, Doe], 1500: [Jane], 2000: [Smith]}
 
-//NetCracker
+//NetCracker (OSS Support wing)
 
 1. Group anagrams: Anagrams are strings which have same characters but in different order.
 i/p: ['cat', 'dog', 'tac', 'god', 'act'] => o/p: [['cat', 'tac', 'act'], ['dog', 'god']]
@@ -151,3 +151,22 @@ Some questions around Kafka:
 	-Fallback strategy 
 	-Retry and push to DLQ strategy
 
+
+//Netcracker (OSS R&D wing)
+Round 1: Technical discussions
+-Questions from core Java 
+-HashMap question:
+Having a employee objects as keys (with equals and HashCode overridden)
+Then we change the employee-key here and try to fetch the values from Hashmat using the same key.
+We are checking whether the key exists in the map. 
+How does it impacts the HashMap ? (Hint: memory leak, since key's hashcode is modified, map won't have that new key, and the old key is not reachable)
+-Given a set, we are iterating a set and modifying the elements
+How the set will behave ?  -> ConcurrentModificationException
+How to mitigate it in a set ?
+You can use Iterator’s remove() method -it's safe for single threaded app
+Or use CopyOnWriteArraySet -> when it's a multiple threaded environment 
+-DBMS code, where we are manually trying to connect to database using Connection API.
+In that code, it's using Statement. 
+Do we need to use PreparedStatement ? What is the difference between Statement and PreparedStatement ?
+-Algo question
+Return all the unique pairs from integer list, whose sum is equal to target sum.
