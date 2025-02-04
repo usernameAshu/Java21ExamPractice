@@ -1,3 +1,22 @@
+//Deutsche Bank
+1. Virtual thread. How is it able to create so many threads without resource limit exceeding
+2. Custom exception can be checked or unchecked ?
+Which one to use in which scenario ?
+3. API optimization - database layer, application layer 
+4. Factory pattern 
+5. What is hashing?
+6. When you put objects in a Set, how are the objects compared ? (how are equals and hashcode contracts checked)
+7. Custom Serialization
+8. How can we connect 2 datasources from java application ?
+
+//Publicis Sapient 
+
+//ThoughtWorks
+
+//Nasdaq
+
+//Morgan Stanley
+
 //Chubb
 1. Remove duplicates from an array.
 i/p: [1,2,5,3,5,2,1] => o/p: [1,2,5,3]
@@ -28,6 +47,7 @@ Else, replace it with -1.
 i/p: [4, 5, 2, 10, 8] => o/p: [5, 10, 10, -1, -1]
 
 //Koch Industries
+Round 1 & Round 2 (technical)
 1. Given an array of Integers, rotate the array by 'k' elements.
 i/p: [1, 2, 3, 4, 5, 6, 7] and k = 3 => o/p: [5, 6, 7, 1, 2, 3, 4]
 
@@ -36,6 +56,15 @@ Find the employee with least designation. Least designation is 0, maximum is 10.
 If you have multiple employees with the same designation,
 then find the employee with the highest salary.
 i/p: [{1000, 5}, {1500, 3}, {2000, 5}, {2500, 3}, {3000, 5}] => o/p: {2500, 3}
+
+Round 3 (Managerial)
+1. Explain the architecture of the project
+2. How to handle team conflicts ?
+3. Have you ever need to innovate and research for your project ?
+4. How to deliver projects on schedule to clients ?
+5. How much work have you done on architecting a software project ?
+
+Round 4 (Connect with Onshore lead)
 
 //IBS
 Coding round:
@@ -170,3 +199,29 @@ In that code, it's using Statement.
 Do we need to use PreparedStatement ? What is the difference between Statement and PreparedStatement ?
 -Algo question
 Return all the unique pairs from integer list, whose sum is equal to target sum.
+
+//All-State Insurance Firm (Tech Round 1)
+1. Describe about the project
+2. In Kafka, how can consumers want to consume the last 5 messages from the queue? (Negative offset)
+3. In Jenkins pipeline script, we don't want the same person who authorised dev pipeline to approve test pipeline. How to do it ? (CICD, Deployment)
+4. In a Database, we want to update the same record by multiple transactions, without applying exclusive lock to the record. How ? (Field level locking)
+-This mechanism is widely used across many booking systems, reservations systems 
+5. What are the cons of Spring Data JPA, and what are the benefits of using JdbcTemplate ?
+6. What are the newly introduced features in Java 21 ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
