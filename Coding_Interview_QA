@@ -22,6 +22,13 @@ How we can implement failure mechanisms in Kafka queues,
 How to handle retry logics, how to process failed records from DLQ.
 Coding problem in their existing repository
 
+Reverse a string in java
+sort a hashmap (ascending or descending) (keys and values)
+What is final keyword in java?
+What is the use of static in Java?
+Java program to read the content from CSV and print in console.
+Separate 0s and 1s in the array 
+
 //Morgan Stanley
 
 //Chubb
@@ -53,7 +60,7 @@ o/p: 3
 Else, replace it with -1.
 i/p: [4, 5, 2, 10, 8] => o/p: [5, 10, 10, -1, -1]
 
-//Koch Industries
+//Koch Industries (contracting for TNS)
 Round 1 & Round 2 (technical)
 1. Given an array of Integers, rotate the array by 'k' elements.
 i/p: [1, 2, 3, 4, 5, 6, 7] and k = 3 => o/p: [5, 6, 7, 1, 2, 3, 4]
@@ -72,6 +79,9 @@ Round 3 (Managerial)
 5. How much work have you done on architecting a software project ?
 
 Round 4 (Connect with Onshore lead)
+General discussion about the project
+Explained the team structure
+The project is for TNS, and KGSI is contracting for TNS
 
 //IBS
 Coding round:
@@ -208,7 +218,54 @@ Do we need to use PreparedStatement ? What is the difference between Statement a
 -Algo question
 Return all the unique pairs from integer list, whose sum is equal to target sum.
 
-//All-State Insurance Firm (Tech Round 1) [Tech Lead attitude bit target oriented, puts in extra hours, but listener and learner]
+Round 2 (Technical Round)
+1. Identify NPE from logs
+2. Improve Reentrant logs from the code. Suggest better ways of locking (tryLock, surrounding try-catch-finally with lock.unlock() in finally)
+3. Write a REST API for pagination, filtration and sorting. Also, how can we choose multiple columns for filtration and sorting. (Along with operations : equals, matches, not-equals)
+4. Develop abstract factory design pattern from the code snippet.
+5. Inter service communication was using HTTP REST Api. How can we improve it ? (Using messaging communication)
+6. There is a POST request coming to a microservice , we have a DB and Kafka-queue connected to the microservice. 
+Condition is that whenever record in persisted to DB, then only notification event should be triggered to Queue. Condition, if record fails to persist, there should be no communication sent out to the Queue. 
+(Ans: Use the following steps:
+Block: 1
+1. POST request comes to service
+2. Service validates the request 
+3. Begin transaction
+Try
+4. Save record to db
+5. insert into transaction_log table, with sent flag as false
+Catch
+6. Rollback transaction 
+Finally
+7. Commit transaction
+8. Close transaction.
+
+Block 2:
+1. Cron job is scheduled to run every 15mins.
+2. Begin transaction
+Try
+3. Scans the db for the record persisted but not sent
+4. Sends the record to kaka queue by KafkaTemplate 
+5. Update sent flag to true
+Catch 
+6. Rollback transaction 
+Finally
+7. Commit transaction 
+8. Close transaction 
+
+//TSYS Global Payments (Round 1 Tech)
+1. Algo: Given a list of Teams (name and seniority), and given number of teams.
+Divide the teams equally into all teams with decreasing seniority, last team can have less members if required.
+2. Explain overriding in Java
+3. How to improve query performance ?
+4. Kafka topic partitions 
+5. What are coding standards being followed ?
+6. How do you review code by our juniors ?
+7. How do you motivate your teammates?
+8. If team is overshooting the work, how to manage it ?
+
+
+//All-State Insurance Firm (Tech Round 1) [Tech Lead bit target oriented (have to complete, don't care how you complete it), but listener and learner]
 1. Describe about the project
 2. In Kafka, how can consumers want to consume the last 5 messages from the queue? (Negative offset)
 3. In Jenkins pipeline script, we don't want the same person who authorised dev pipeline to approve test pipeline. How to do it ? (CICD, Deployment)
