@@ -2,7 +2,7 @@
 1. Virtual thread. How is it able to create so many threads without resource limit exceeding
 2. Custom exception can be checked or unchecked ?
 Which one to use in which scenario ?
-3. API optimization - database layer, application layer 
+3. API optimisation - database layer, application layer 
 4. Factory pattern 
 5. What is hashing?
 6. When you put objects in a Set, how are the objects compared ? (how are equals and hashcode contracts checked)
@@ -10,10 +10,17 @@ Which one to use in which scenario ?
 8. How can we connect 2 datasources from java application ?
 
 //Publicis Sapient 
+Write a messaging queue model using wait and notify methods 
 
 //ThoughtWorks
+Write the REST API for a POST http method. 
+Using all best practices and Coding standards, along with Pair programming.
 
 //Nasdaq
+Most of the questions were related to Kafka. 
+How we can implement failure mechanisms in Kafka queues, 
+How to handle retry logics, how to process failed records from DLQ.
+Coding problem in their existing repository
 
 //Morgan Stanley
 
@@ -184,6 +191,7 @@ Some questions around Kafka:
 //Netcracker (OSS R&D wing)
 Round 1: Technical discussions
 -Questions from core Java 
+-Order of Initialization
 -HashMap question:
 Having a employee objects as keys (with equals and HashCode overridden)
 Then we change the employee-key here and try to fetch the values from Hashmat using the same key.
@@ -200,7 +208,7 @@ Do we need to use PreparedStatement ? What is the difference between Statement a
 -Algo question
 Return all the unique pairs from integer list, whose sum is equal to target sum.
 
-//All-State Insurance Firm (Tech Round 1)
+//All-State Insurance Firm (Tech Round 1) [Tech Lead attitude bit target oriented, puts in extra hours, but listener and learner]
 1. Describe about the project
 2. In Kafka, how can consumers want to consume the last 5 messages from the queue? (Negative offset)
 3. In Jenkins pipeline script, we don't want the same person who authorised dev pipeline to approve test pipeline. How to do it ? (CICD, Deployment)
