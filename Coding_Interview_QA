@@ -81,7 +81,8 @@ Round 3 (Managerial)
 Round 4 (Connect with Onshore lead)
 General discussion about the project
 Explained the team structure
-The project is for TNS, and KGSI is contracting for TNS
+The project is for TNS, and KGSI is contracting for TNS (Important to note)
+Although TNS is part of Koch industries, and Koch Business Solutions is providing tech services to TNS
 
 //IBS
 Coding round:
@@ -266,6 +267,7 @@ Divide the teams equally into all teams with decreasing seniority, last team can
 
 
 //All-State Insurance Firm (Tech Round 1) [Tech Lead bit target oriented (have to complete, don't care how you complete it), but listener and learner]
+Tech Round 1
 1. Describe about the project
 2. In Kafka, how can consumers want to consume the last 5 messages from the queue? (Negative offset)
 3. In Jenkins pipeline script, we don't want the same person who authorised dev pipeline to approve test pipeline. How to do it ? (CICD, Deployment)
@@ -274,12 +276,46 @@ Divide the teams equally into all teams with decreasing seniority, last team can
 5. What are the cons of Spring Data JPA, and what are the benefits of using JdbcTemplate ?
 6. What are the newly introduced features in Java 21 ?
 
+Manger Round:
+1.
+
+//Blue Optima (HR Screening round)
+1. Scenario based questions 
+2. Conflict handling among team members
+3. Proposing new solutions to Client/Manager
+4. Challenging environment example and resolution
+
+
+//Moody's 
+Skills: Java Spring Boot, Docker and Kubernetes
+Fulltext Indexing / Fulltext Search Engines
+HR Screening round:
+1. Questions regarding spring boot and docker 
+2. How to create docker images
+3. How to create spring boot jar files 
+4. How to use Docker compose 
+5. What are the commands inside the Dockerfile ? Explain ENTRYPOINT, CMD 
+
+
+
+//IBM Software (Java Full Stack Developer)
+Round 1: Coding Assessment
 
 
 
 
 
 
+
+
+----------------
+Java Full Stack Developer	11377	
+Java Backend Developer	12006
+
+
+
+
+-------Coding rough samples-------------------
 //Netcracker Round 2 codes:
 class Formatter {
     public String format(String value) {
