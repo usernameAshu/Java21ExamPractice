@@ -280,6 +280,121 @@ Divide the teams equally into all teams with decreasing seniority, last team can
 
 
 
+//Netcracker Round 2 codes:
+class Formatter {
+    public String format(String value) {
+        return "[" + value + "]";
+    }
+}
+
+public class TestNPE {
+    public static String handle(Formatter f, String s) {
+        if (s.isEmpty()) {
+            return "(none)";
+        }
+        return f.format(s.trim())
+    }
+}
+
+/*
+From somewhere was invoked method handle and following Exception was thrown:
+
+Exception in thread "main" java.lang.NullPointerException
+    at TestNPE.handle(TestNPE.java:9)
+
+What is the reason of exception - f or s?
+ */
+
+----------
+@Service
+@Slf4j
+class EventService {
+
+    public Lock lock = new ReentrantLock();
+
+    public void processEvent(Event event) {
+        lock.lock();
+        //switch case 
+        if (event.getType() == EventType.REVIEW_APPROVED) {
+            processApproved(event.getId(), event.getPayload());
+        } else if (event.getType() == EventType.REVIEW_CREATED) {
+            processCreated(event.getId(), event.getPayload());
+        } else if (event.getType() == EventType.REVIEW_DELETED) {
+            processDeleted(event.getId(), event.getPayload());
+        }
+        lock.unlock();
+    }
+
+//solution :
+    {
+        if(lock.trylock())
+        try {
+
+        } catch(InteE ex) {}
+        finally {
+            lock.unlock();
+        }
+
+    }
+    //solution :
+
+    private void processApproved(String id, String payload) {
+        throw new Error("Approved event is temporary deprecated!");
+    }
+
+    private void processCreated(String id, String payload) {
+        log.info("Created: {}, payload: {}", id, payload);
+    }
+
+    private void processDeleted(String id, String payload) {
+        throw new Error("Deleted event is temporary deprecated!");
+    }
+}
+
+//abstract factory pattern 
+
+abstract 
+-----------------------
+@Component
+@Slf4j
+public class MyService {
+
+    public void processData(List<Data> data) {
+        log.debug("process data " + data);
+        data.forEach(d -> {
+            //do some internal computation
+            this.sendProcessedData(d);
+        });
+    }
+
+    private void sendProcessedData(Data data) {
+        // do request with rest template to Microservice C
+    }
+}
+
+// Microservice A -> current microservice B -> Microservice C
+
+//HTTP rest api comm , page, size, sortBy (price & name), order, filterBy (language & genre), filterValue
+GET HTTP/1.1
+Params: 
+page (default = 0)
+size (deafult = 5)
+sortBy (default = "id")
+order (default ="asc")
+filterBy(required=false)
+filterValue(required=false)
+getUsers()
+
+curl -X POST "http://localhost:8080/api/users?page=0&size=5&sortBy=price&order=asc&filterBy=language&filterValue=english"
+-H 'Acceppt:json'
+-body '{  "sortBy" : [ {"name": "price", "order" : "desc" }, {"name": "name", "order" : "asc" } ], 
+"filterBy" : [ {"name": "language", "value" : "en", operation: "" }, {"name": "genre", "value" : "fiction" , operation: ""}] }'
+
+//ENUM: equals, contains, not-equals 
+language : 'en' : !'en'
+//
+findBookNameContaining(bookname, pagale)
+
 
 
 
