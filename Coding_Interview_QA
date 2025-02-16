@@ -139,13 +139,15 @@ Round 2: Tech round
 1. Sort employee list based on salary
 2. From tables of customers and orders , print the customer_name and customer_id for shopping over 500.
 
-Round 3: Manager Round
+Round 3: Manager Round (rejected)
 1. How to architect a distributed messaging queue system ?
 2. How to handle events which are getting failed ?
 3. How to fix an application which is getting exhausted (thread-pools) by the incoming requests from topic ? (Thread-timeout)
 4. In a pub-sub model, lets say if there is a huge thread-contention, how to handle that? (Thread-coordinator)
 5. In applications, queries are taking huge time to finish, what can we do ? (Database partition & sharding)
 6. If we need to create an index for a small dataset, and since BTree index will be a overkill, which index is preferred ?
+
+Round 2 (different Team):
 
 
 //Shell Recharge
@@ -254,6 +256,16 @@ Finally
 7. Commit transaction 
 8. Close transaction 
 
+
+Round 3 (Managerial)
+Explained about the project details, tech stack
+Product R&D project for OSS domains
+Kubernetes architecture diagram,
+Explain the UI - backend - database flow 
+Load balancers and all - tell how the system can be more resilient, scalable and fault tolerant
+Future projects in Netcracker will be in Go & Java (50-50 ratio)
+Since, Go has less resource footprint than Java when deployed to cloud containers 
+
 //TSYS Global Payments (Round 1 Tech)
 1. Algo: Given a list of Teams (name and seniority), and given number of teams.
 Divide the teams equally into all teams with decreasing seniority, last team can have less members if required.
@@ -264,6 +276,12 @@ Divide the teams equally into all teams with decreasing seniority, last team can
 6. How do you review code by our juniors ?
 7. How do you motivate your teammates?
 8. If team is overshooting the work, how to manage it ?
+
+Round 2 (Techno manager)
+1. Project explain
+2. Coding problem: print the frequency of consonants from a string 
+3. Design a Twitter system , where users can post and read tweets. The system will be traffic intensive
+4. What are indexes and how it can impact a table performance?
 
 
 //All-State Insurance Firm (Tech Round 1) [Tech Lead bit target oriented (have to complete, don't care how you complete it), but listener and learner]
@@ -280,6 +298,11 @@ Techno-Manger Round:
 1. What is rate limiter system ? How can we configure the rate limiter ?
 2. What is consumer lag in Kafka ? What are the best practices to avoid that ?
 3. LRU Leetcode problem solving
+
+HR Round 
+Last round HR was very rude and impatient.
+Reported the same to hiring HR.
+Offer released.
 
 //Blue Optima 
 HR Screening round
@@ -300,8 +323,19 @@ HR Screening round:
 2. How to create docker images
 3. How to create spring boot jar files 
 4. How to use Docker compose 
-5. What are the commands inside the Dockerfile ? Explain ENTRYPOINT, CMD 
+5. What are the commands inside the Dockerfile ? Explain ENTRYPOINT, CMD
 
+Questions to be asked:
+Round - 1: tech round
+Java & SB
+MySQL
+Debugging, reading logs, investigating & fixing bugs
+Round - 2: project study 
+Github project assessment 
+Present case study 
+Q&A on the case study  
+
+-----------------------------------
 
 
 //IBM Software (Java Full Stack Developer)
@@ -321,6 +355,17 @@ Round 1: Tech interview
 3. Create a Singleton class
 4. What is the difference between ConcurrentHashMap and SynchronizedHashMap ?
 
+
+//MBRDI
+1. Project talk
+2. Explain the microservice architecture
+3. How Kubernetes works 
+4. How to manage application secrets, when we are installing in Kubernetes ?
+5. Case study: 
+You have a UI, where you need to show the top matching results (Top 5) for a word.
+The word can be started, middle or last few letters. 
+The DB stores 10 milling records of the search key (employee name)
+How will you design the system ?
 
 
 //Github init commands
@@ -531,5 +576,10 @@ class Solution {
 
 
 
+
+
+0001LAJ5KBX9H8|0003UKURNK403F|0002MO6K1Z9WFA|0004OWRXZFMS2C
+
+000151KQE7Z9PY>0004I5IL53CF9W>0009UNEHJQITGB>0008IZU8DNGZWT>0002J6POW4KAT6>0007CGSJCQ07SJ>0006RZKXGPW2OE>0003E2GUHIRKTR>0005192QEFZJMM
 
 
